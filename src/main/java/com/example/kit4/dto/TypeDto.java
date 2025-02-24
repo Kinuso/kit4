@@ -1,4 +1,6 @@
 package com.example.kit4.dto;
 
-public record TypeDto(String gameName, String opponentId, int boardSize) {
+import java.util.UUID;
+
+public record TypeDto(String gameName, UUID opponentId, int boardSize) {
 }
