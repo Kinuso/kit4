@@ -13,5 +13,4 @@ public class GameCatalogImpl implements GameCatalog {
     public Collection<String> getGameIdentifiers() {
         return List.of("TicTacToe", "Gomoku", "Chess");
     }
-
 }

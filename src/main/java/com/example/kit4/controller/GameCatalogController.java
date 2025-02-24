@@ -1,6 +1,8 @@
 package com.example.kit4.controller;
 
 import com.example.kit4.GameCatalog;
+import fr.le_campus_numerique.square_games.engine.GameFactory;
+import fr.le_campus_numerique.square_games.engine.connectfour.ConnectFourGameFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
