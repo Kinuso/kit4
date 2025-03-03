@@ -1,19 +1,21 @@
 package com.example.kit4.service;
 
+import com.example.kit4.dto.GameDto;
 import com.example.kit4.dto.TypeDto;
 import fr.le_campus_numerique.square_games.engine.Game;
-import fr.le_campus_numerique.square_games.engine.GameFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 @Service
 public interface GameService {
-    ArrayList<Game> createGame(UUID userId, TypeDto typeDto);
+    Game createGame(UUID userId, TypeDto typeDto);
 
-    ArrayList<Game> getGames();
+    ArrayList<Game> getGames(UUID userId);
 
-    List<GameFactory> getGame(String gameId);
+    GameDto getGame(UUID gameId);
+
+    ResponseEntity<String> makeMove(UUID gameId, UUID playerId);
 }
